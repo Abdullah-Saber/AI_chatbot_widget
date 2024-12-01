@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbot Helper</title>
+  <link rel="stylesheet" href="AI_chatbot.css">
+</head>
+<body>
+  
+
+  <!-- Chatbot Icon -->
+  <button id="chatbot-icon" class="chatbot-icon" onclick="toggleChat()">
+    <img src="robot.png" alt="Chatbot Icon">
+  </button>
+
+  <!-- Chatbot Container -->
+  <div id="chatbot-container" class="chatbot-container">
+    <div class="resize-handle resize-top"></div>
+    <div class="resize-handle resize-right"></div>
+    <div class="resize-handle resize-bottom"></div>
+    <div class="resize-handle resize-left"></div>
+    <header class="chatbot-header">
+      <h3>AI Assistant</h3>
+      <button onclick="toggleChat()" class="close-btn">×</button>
+      
+    </header>
+    <div class="chatbot-body" id="chat-body">
+      <div class="chat-message bot-message">
+        Hi! I'm your AI Assistant. How can I help you today? 😊
+      </div>
+    </div>
+    <footer class="chatbot-footer">
+      <input type="file" id="file-upload" hidden>
+      <label for="file-upload" class="attach-icon">📎</label>
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Type your message..."
+        onkeydown="if(event.key === 'Enter') sendMessage()"
+      />
+      <button onclick="sendMessage()" class="send-btn">➤</button>
+      <button class="mic-icon">
+        <img src="mic.png" alt="Mic">
+    </footer>
+  </div>
+
+  <script src="AI_chatbot.js"></script>
+</body>
+</html>
